@@ -14,17 +14,17 @@ module NavigationHelpers
     case page_name
 
     when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
-      
-    when /^the edit page for "(.*)"/
+    
+    when /^the edit page for "(.*)"$/
       movie = Movie.find_by(title: $1)
       edit_movie_path(movie)
-      
-      
+    
     when /^the details page for "(.+)"/
       movie = Movie.find_by(title: $1)
       movie_path(movie)
 
-    when /^the Similar Movies page for "(.+)"/
+    #when /^the Similar movies page for "(.+)"/
+      when /^the Similar Movies page for "(.+)"/
       movie = Movie.find_by(title: $1)
       similar_movies_path(movie)
 
