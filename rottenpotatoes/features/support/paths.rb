@@ -24,7 +24,7 @@ module NavigationHelpers
       movie = Movie.find_by(title: $1)
       movie_path(movie)
 
-    when /^the Similar movies page for "(.+)"/
+    when /^the Similar Movies page for "(.+)"/
       movie = Movie.find_by(title: $1)
       similar_movies_path(movie)
 
